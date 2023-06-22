@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <title>Document</title>
+  <style>
+    div {width: 100px; height: 100px; border: 1px solid red;}
+  </style>
+  <script>
+    $(document).ready(function() {
+      $('#choice').on('change', function() {
+        const choice = $('#choice').val();
+        if(choice === '나타나라') {
+          $('div').css('display', 'block');
+        }else {
+          $('div').css('display', 'none');
+        }
+      });
+      $('#select').on('change', function() {
+        const color = $('#select').val();
+        $('div').css('background-color', color);
+      });
+    });
+  </script>
+</head>
+<body>
+  <div>A</div>
+  <select id="choice">
+    <option>나타나라</option>
+    <option>사라져라</option>
+  </select>
+  <select id="select">
+    <option value="red">빨강</option>
+    <option value="yellow">노랑</option>
+    <option value="blue">파랑</option>
+  </select>
+</body>
+</html>

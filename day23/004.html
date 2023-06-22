@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <title>Document</title>
+  <script>
+    // JS 는 웹브라우저를 조작할 수 있다 : window
+    // window.location; 주소 표시줄
+    // window.history;  앞/뒤로
+    // window.document; 화면      DOM
+    // $('p')           모든 p 를 선택하라
+    // $('<p>')         p tag 를 만들어라
+    $(document).ready(function() {
+      $('p').on('click', function() {
+        $(this).css('display', 'none');
+      });
+    });
+  </script>
+</head>
+<body>
+  <!-- p 를 클릭하면 해당하는 p 를 사라지게 하시오. -->
+  <p>1111111111</p>
+  <p>2222222222</p>
+  <p>3333333333</p>
+</body>
+</html>

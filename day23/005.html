@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <title>Document</title>
+  <script>
+    // click 이벤트
+    // blur : 아이디, 비밀번호 등을 검증한다.
+    // keyup : 엔터를 잡는다.
+    // change : 선택을 변경한다.
+    $(document).ready(function() {
+      $('#print').on('click', function() {
+        console.log($('#choose').val());
+      });
+      $('#choose').on('change', function() {
+        console.log($(this).val());
+      })
+    });
+  </script>
+</head>
+<body>
+  <select id="choose"> <!-- select 안에는 무조건 option -->
+    <option>사라져라</option>
+    <option>나타나라</option>
+  </select>
+  <button id="print">출력</button>
+</body>
+</html>

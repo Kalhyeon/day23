@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>css position 속성</title>
+  <style>
+    div {width: 100px; height: 100px;}
+    #a {border: 1px solid red;}
+    /*
+      relative, absolue 를 사용하면 공중에 떠서 이동한다.
+      relative 는 원래 자기 자신의 위치를 기준으로 삼아 이동하고, 원래의 공간은 비운다.
+      absolue 는 부모를 기준으로 삼아 이동한다 (부모가 없으면 전체화면을 기준으로 삼는다).
+                원래의 공간은 채워진다.
+      이동시킬 요소는 absolute 속성을 지정한다.
+      요소의 부모에 relative 속성을 지정한다.
+      static 요소는 부모가 될 수 없다.
+    */
+    #b {border: 1px solid blue; top: 30px; left: 50px; position: relative;}
+    #c {border: 1px solid green;}
+    #d {border: 1px solid pink;}
+    #e {border: 1px solid violet; position: fixed; bottom: 10px; right: 10px;}
+  </style>
+</head>
+<body>
+  <!-- 요소들의 기본 position 속성은 static (상-하, 좌-우)이다. -->
+  <div id="a">A</div>
+  <div id="b">B</div>
+  <div id="c">C</div>
+  <div id="d">D</div>
+  <div id="e">E</div>
+</body>
+</html>

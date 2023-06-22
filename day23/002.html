@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <title>Document</title>
+  <style>
+    p {border: 1px solid red;}
+  </style>
+  <script>
+    $(document).ready(function() {
+      $('p').on('click', function() {
+        alert($(this).text());
+      });
+    });
+  </script>
+</head>
+<body>
+  <p>빨강</p>
+  <p>파랑</p>
+  <p>노랑</p>
+</body>
+</html>

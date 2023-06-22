@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <title>Document</title>
+  <style>
+    #canvas {width: 100px; height: 100px; background-color: red;}
+  </style>
+  <script>
+    $(document).ready(function() {
+      $('#show').on('click', function() {
+        $('#canvas').css('display', 'block');
+      });
+      $('#hide').on('click', function() {
+        $('#canvas').css('display', 'none');
+      });
+      $('#toggle').on('click', function() {
+        const text = $(this).text();
+        if(text === '보이기') {
+          $('#canvas').css('display', 'none');
+          $(this).text('감추기');
+        }else {
+          $('#canvas').css('display', 'block');
+          $(this).text('보이기');
+        }
+      });
+    });
+  </script>
+</head>
+<body>
+  <!-- 토글 버튼 -->
+  <div id="canvas"></div>
+  <button id="show">보이기</button>
+  <button id="hide">감추기</button>
+  <hr>
+  <button id="toggle">보이기</button>
+</body>
+</html>
